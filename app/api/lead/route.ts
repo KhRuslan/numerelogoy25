@@ -21,7 +21,7 @@ export async function POST(req: Request) {
   const payload = {
     timestamp: new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Almaty' }),
     name: parsed.data.name,
-    phone: parsed.data.phone,
+    phone: parsed.data.phone.replace(/^\+/, ''),
     utm_source: utm.source ?? '',
     utm_medium: utm.medium ?? '',
     utm_campaign: utm.campaign ?? '',

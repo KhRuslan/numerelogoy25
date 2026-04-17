@@ -16,7 +16,7 @@ export async function POST(req: Request) {
   const parsed = leadSchema.safeParse(body)
   if (!parsed.success) return NextResponse.json({ error: 'invalid' }, { status: 400 })
 
-  const webhookUrl = 'https://script.google.com/macros/s/AKfycbzpdMQX3QjcCEXri0vBRjpkPh1UQXoWx-6ot9T2rFZyH_8nlrCV4A1TSfHhAOIL3bOoJw/exec'
+  const webhookUrl = 'https://script.google.com/macros/s/AKfycbxRVDwq81kh_RwfdG7PVaqZnEfPotA4E2ZLP_zVv3xCoVYKLYq92auMVBFQ6kSgbIwO5w/exec'
 
   const payload = {
     timestamp: new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Almaty' }),
